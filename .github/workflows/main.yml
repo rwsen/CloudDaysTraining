@@ -2,8 +2,7 @@ name: pipeline
 on:
   push:
     branches:
-    - main
-            
+    - main 
 - name: Setup Java JDK
   uses: actions/setup-java@v4.2.1
   with:
