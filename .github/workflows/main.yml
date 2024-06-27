@@ -39,6 +39,7 @@ jobs:
         name: rick-backend
         location: 'west europe'
         secure-environment-variables: WEATHER_API_KEY=${{ secrets.OPENWEATHER_TOKEN }}
+        ports: 8080:8080
     
     
           
