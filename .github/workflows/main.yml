@@ -16,8 +16,10 @@ jobs:
         distribution: 'temurin' # See 'Supported distributions' for available options
         java-version: '21'
     - run: ./mvnw package -q
-    - uses: azure/login@v1
-      with: 
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: azure/docker-login@v2
+      with:
+        login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+        username: ${{ secrets.REGISTRY_USERNAME }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
     
           
