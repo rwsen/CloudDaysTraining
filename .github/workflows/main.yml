@@ -38,6 +38,7 @@ jobs:
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: rick-backend
         location: 'west europe'
+        secure-environment-variables: WEATHER_API_KEY=${{ secrets.OPENWEATHER_TOKEN }}
     
     
           
