@@ -1,1 +1,13 @@
+name: pipeline-frontend
+on:
+  push:
+    branches: [ main ]
 
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      
