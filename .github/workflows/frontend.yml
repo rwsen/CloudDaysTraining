@@ -10,4 +10,4 @@ jobs:
       run:
         working-directory: ./frontend
     steps:
-      
+      - run: npm install
