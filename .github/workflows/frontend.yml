@@ -3,7 +3,7 @@ name: pipeline-frontend
 env:
   APP_LOCATION: "/frontend"
   API_LOCATION: "http://rg-accelerator-lg129-rick.westeurope.azurecontainer.io:8080/api/"
-  OUTPUT_LOCATION: "build"
+  BACKEND_API_URL: "rg-accelerator-lg1-rick.westeurope.azurecontainer.io"
 
 on:
   push:
@@ -31,3 +31,5 @@ jobs:
           action: "upload"
           app_location: ${{ env.APP_LOCATION }}
           api_location: ${{ env.API_LOCATION }}
+        env:
+          BACKEND_API_URL: ${{ env.BACKEND_API_URL }}
