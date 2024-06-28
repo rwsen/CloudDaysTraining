@@ -31,7 +31,7 @@ jobs:
       uses: 'azure/aci-deploy@v1'
       with:
         resource-group: ${{ secrets.RESOURCE_GROUP }}
-        dns-name-label: ${{ secrets.RESOURCE_GROUP }}${{ github.run_number }}-rick
+        dns-name-label: ${{ secrets.RESOURCE_GROUP }}-rick
         image: ${{secrets.REGISTRY_LOGIN_SERVER}}/rick_backend_v1:latest
         registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
         registry-username: ${{ secrets.REGISTRY_USERNAME }}
